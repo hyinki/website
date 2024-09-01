@@ -21,11 +21,10 @@ const Hero = () => {
 
     <div className={styles.info}>
     <h1>
-          Harris
-          <br />
-          Johnsen
+          Pang Hyin Ki
+          
         </h1>
-        <h2>Frontend Developer</h2>
+        <h2>Y3 Information <br></br>System student</h2>
         
 
         <span>
@@ -45,7 +44,7 @@ const Hero = () => {
           businesses.
         </p>
         <a href={CV} download>
-          <button className="hover">Resume</button>
+          <button className="hover">Download Resume</button>
         </a>
 
         
