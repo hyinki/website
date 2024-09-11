@@ -1,48 +1,69 @@
 .container {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    padding-top: 100px;
-  
-    span {
-      display: flex;
-      align-items: center;
-      gap: 5px;
-    }
-  
-    img {
-      width: 20px;
-    }
+  padding: 60px 20px;
+  text-align: center;
+  /* No background color */
+  padding-top: 200px;
+}
+
+.sectionTitle {
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  color: #333;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+
+.category {
+  margin-bottom: 40px;
+}
+
+.category h2 {
+  font-size: 1.8em;
+  margin-bottom: 30px;
+  color: #444;
+  font-weight: 500;
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+}
+
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.skillBadge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  background-color: white; /* Keep the badges white for a card-like effect */
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skillBadge:hover {
+  transform: translateY(-5px); /* Slight move-up on hover */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Softer, bigger shadow on hover */
+}
+
+.skillBadge svg {
+  font-size: 2.5em;
+  color: #654762; 
+  margin-bottom: 10px;
+}
+
+.skillBadge span {
+  font-size: 1.1em;
+  font-weight: 500;
+  color: #333;
+}
+
+@media (min-width: 768px) {
+  .skillsGrid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   }
-  
-  .skillList {
-    display: flex;
-    justify-content: space-evenly;
-    align-self: center;
-    flex-wrap: wrap;
-    row-gap: 40px;
-    max-width: 26ch;
-  }
-  
-  hr {
-    width: 100px;
-    height: 1px;
-    border: none;
-    background-color: var(--text-color);
-    margin: 30px auto;
-  }
-  
-  @media (width >= 800px) {
-    .skillList {
-      max-width: fit-content;
-      gap: 30px;
-  
-      p {
-        font-size: 20px;
-      }
-    }
-  
-    hr {
-      width: 300px;
-    }
-  }
+}

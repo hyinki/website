@@ -1,36 +1,69 @@
 import styles from './SkillsStyles.module.css';
-import checkMarkIconDark from '../../assets/checkmark-dark.svg';
-import checkMarkIconLight from '../../assets/checkmark-light.svg';
-import SkillList from '../../common/SkillList';
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaGitAlt, FaBootstrap, FaAngular, FaVuejs } from 'react-icons/fa';
+import { SiTypescript, SiTailwindcss, SiRedux, SiWebpack, SiJest } from 'react-icons/si';
+
+const skillsData = {
+  frontend: [
+    { name: 'HTML', icon: <FaHtml5 /> },
+    { name: 'CSS', icon: <FaCss3Alt /> },
+    { name: 'JavaScript', icon: <FaJs /> },
+    { name: 'React', icon: <FaReact /> },
+    { name: 'Vue', icon: <FaVuejs /> },
+    // { name: 'Tailwind CSS', icon: <SiTailwindcss /> },
+  ],
+  backend: [
+    { name: 'Node.js', icon: <FaNodeJs /> },
+    { name: 'Redux', icon: <SiRedux /> }
+  ],
+  tools: [
+    { name: 'Git', icon: <FaGitAlt /> },
+    { name: 'Bootstrap', icon: <FaBootstrap /> },
+  ],
+};
 
 const Skills = () => {
   return (
     <section id="skills" className={styles.container}>
-      <h1 className="sectionTitle">Skills</h1>
-      <div className={styles.skillList}>
-        <SkillList src={checkMarkIconLight} skill="HTML" />
-        <SkillList src={checkMarkIconLight} skill="CSS" />
-        <SkillList src={checkMarkIconLight} skill="JavaScript" />
-        <SkillList src={checkMarkIconLight} skill="TypeScript" />
-        <SkillList src={checkMarkIconLight} skill="Node" />
+     
+      <h1 className={styles.sectionTitle}>Skills</h1>
+
+      <div className={styles.category}>
+        <h2>Frontend</h2>
+        <div className={styles.skillsGrid}>
+          {skillsData.frontend.map((skill, index) => (
+            <div key={index} className={styles.skillBadge}>
+              {skill.icon}
+              <span>{skill.name}</span>
+            </div>
+          ))}
+        </div>
       </div>
-      <hr />
-      <div className={styles.skillList}>
-        <SkillList src={checkMarkIconLight} skill="React" />
-        <SkillList src={checkMarkIconLight} skill="Angular" />
-        <SkillList src={checkMarkIconLight} skill="Vue" />
-        <SkillList src={checkMarkIconLight} skill="Tailwind CSS" />
+
+      <div className={styles.category}>
+        <h2>Backend</h2>
+        <div className={styles.skillsGrid}>
+          {skillsData.backend.map((skill, index) => (
+            <div key={index} className={styles.skillBadge}>
+              {skill.icon}
+              <span>{skill.name}</span>
+            </div>
+          ))}
+        </div>
       </div>
-      <hr />
-      <div className={styles.skillList}>
-        <SkillList src={checkMarkIconLight} skill="Redux" />
-        <SkillList src={checkMarkIconLight} skill="Webpack" />
-        <SkillList src={checkMarkIconLight} skill="Git" />
-        <SkillList src={checkMarkIconLight} skill="Jest" />
-        <SkillList src={checkMarkIconLight} skill="Bootstrap" />
+
+      <div className={styles.category}>
+        <h2>Tools</h2>
+        <div className={styles.skillsGrid}>
+          {skillsData.tools.map((skill, index) => (
+            <div key={index} className={styles.skillBadge}>
+              {skill.icon}
+              <span>{skill.name}</span>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Skills
+export default Skills;
