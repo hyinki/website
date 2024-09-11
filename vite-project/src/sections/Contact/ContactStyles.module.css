@@ -41,7 +41,7 @@
   }
   
   input[type='submit'] {
-    background-color: var(--btn-color);
+    background-color: #654762;
     color: var(--btn-text-color);
     border: none;
     border-radius: 20px;
