@@ -1,6 +1,6 @@
 import styles from './SkillsStyles.module.css';
-import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaGitAlt, FaBootstrap, FaAngular, FaVuejs } from 'react-icons/fa';
-import { SiTypescript, SiTailwindcss, SiRedux, SiWebpack, SiJest } from 'react-icons/si';
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaGitAlt, FaBootstrap, FaVuejs } from 'react-icons/fa';
+import {  SiRedux } from 'react-icons/si';
 
 const skillsData = {
   frontend: [
