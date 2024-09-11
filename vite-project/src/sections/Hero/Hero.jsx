@@ -1,5 +1,5 @@
 import styles from './HeroStyles.module.css';
-import heroImg from '../../assets/Design uten navn.png';
+import heroImg from '../../assets/heropic.png';
 import twitterLight from '../../assets/twitter-light.svg';
 import githubLight from '../../assets/github-light.svg';
 import linkedinLight from '../../assets/linkedin-light.svg';
@@ -28,20 +28,19 @@ const Hero = () => {
         
 
         <span>
-          <a href="https://twitter.com/" target="_blank">
+          {/* <a href="https://twitter.com/" target="_blank">
             <img src={twitterLight} alt="Twitter icon" />
-          </a>
-          <a href="https://github.com/" target="_blank">
+          </a> */}
+          <a href="https://github.com/hyinki" target="_blank">
             <img src={githubLight} alt="Github icon" />
           </a>
-          <a href="https://linkedin.com/" target="_blank">
+          <a href="https://www.linkedin.com/in/pang-hyin-ki/" target="_blank">
             <img src={linkedinLight} alt="Linkedin icon" />
           </a>
           
         </span>
         <p className={styles.description}>
-          With a passion for developing modern React web apps for commercial
-          businesses.
+        With a passion for leveraging data to drive informed decision-making and create innovative solutions that transform businesses.
         </p>
         <a href={CV} download>
           <button className="hover">Download Resume</button>
