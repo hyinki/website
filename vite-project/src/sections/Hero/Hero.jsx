@@ -3,7 +3,7 @@ import heroImg from '../../assets/heropic.png';
 import twitterLight from '../../assets/twitter-light.svg';
 import githubLight from '../../assets/github-light.svg';
 import linkedinLight from '../../assets/linkedin-light.svg';
-import CV from '../../assets/cv.pdf';
+import CV from '../../assets/Pang Hyin Ki Resume.pdf';
 
 const Hero = () => {
   
