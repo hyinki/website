@@ -41,6 +41,7 @@
     justify-content: space-between;
     align-items: center;
     gap: 60px;
+    z-index: 10; 
   }
   
   /* media queries */

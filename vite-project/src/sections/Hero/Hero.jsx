@@ -14,7 +14,7 @@ const Hero = () => {
       <img
         src={heroImg}
         className={styles.hero}
-        alt="Profile picture of Harris Johnsen"
+        alt="Profile picture of Hyin Ki"
       />
 
     </div>
