@@ -40,7 +40,7 @@ const Hero = () => {
           
         </span>
         <p className={styles.description}>
-        With a passion for leveraging data to drive informed decision-making and create innovative solutions that transform businesses.
+        With a passion for leveraging<br></br> data to drive informed decision-making <br></br>and create innovative solutions <br></br>that transform businesses.
         </p>
         <a href={CV} download>
           <button className="hover">Download Resume</button>
